@@ -1,5 +1,5 @@
 public class Ativo {
-    private int código;
+    private int codigo;
     private String nome;
     private double precoAtual;
 }
