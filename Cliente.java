@@ -14,7 +14,7 @@ public class Cliente {
     public String getNome(){
         return this.nome;
     }
-    public String  getCPF(){
+    public String getCPF(){
         return this.CPF;
     }
 }
