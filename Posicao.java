@@ -16,6 +16,14 @@ public class Posicao {
         return this.quantidade;
     }
 
+    //Obtenção e retorno de ativos
+    public double getValorAtivo(){
+        return ativo[quantidade].precoAtual;
+    }
+    public String getNomeAtivo(){
+        return ativo[quantidade].nome;
+    }
+
     //calculo de posicao
     public double calcularValor(){
          return ativo[quantidade].precoAtual * this.quantidade; //Passível de teste dentro do array, this.quantidade ou somente quantidade.
