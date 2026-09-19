@@ -19,6 +19,7 @@ public class Ativo {
     }
     public void setPrecoAtual(double precoAtual){
         this.precoAtual=precoAtual;
+    }
     //getters
     public int getcodigo(){
         return this.codigo;
