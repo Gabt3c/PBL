@@ -10,6 +10,15 @@ public class Ativo {
         this.nome = nome;
         this.precoAtual = precoAtual;
     }
+    //setters
+    public void setCodigo(int codigo){
+        this.codigo=codigo;
+    }
+    public void setNome(String nome){
+        this.nome=nome;
+    }
+    public void setPrecoAtual(double precoAtual){
+        this.precoAtual=precoAtual;
     //getters
     public int getcodigo(){
         return this.codigo;
