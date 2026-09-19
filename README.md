@@ -2,4 +2,4 @@ Repository built with the goal to complete a OOP course group activity at Centro
 We'll build an program that simulates a investment wallet system.
 
 Integrants names:
-Gabriel de Souza Silva
+Gabriel de Souza Silva, Andre Yurhi
