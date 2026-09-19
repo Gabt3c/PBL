@@ -2,7 +2,7 @@ public class Ativo {
     //atributos
     private int codigo;
     private String nome;
-    private double precoAtual;
+    protected double precoAtual;
 
     //construtor
     public Ativo(int codigo, String nome, double precoAtual){
