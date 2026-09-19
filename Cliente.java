@@ -5,16 +5,16 @@ public class Cliente {
         this.nome = nome;
         this.CPF = CPF;
     }
-    setNome(String nome){
+    public void setNome(String nome){
         this.nome = nome;
     }
-    setCPF(String CPF){
+    public void setCPF(String CPF){
         this.CPF = CPF;
     }
-    getNome(){
+    public String getNome(){
         return this.nome;
     }
-    getCPF(){
+    public String  getCPF(){
         return this.CPF;
     }
 }
