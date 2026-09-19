@@ -3,7 +3,7 @@ public class CarteiraInvestimentos{
         public Cliente cliente;
         public int qtAtivo;
 
-        public CarteiraInvestimentos(Posicao posicao, int qtAtivo){
+        public CarteiraInvestimentos(int qtAtivo){
             this.posicao = new Posicao[qtAtivo];
         }
 

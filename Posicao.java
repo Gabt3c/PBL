@@ -1,10 +1,9 @@
 public class Posicao {
-    private int quantidade;
-    public Ativo[] ativo;
+    private int quantidade;// quantidade de posições
+    protected Ativo[] ativo;
 
-    public Posicao (int quantidade, Ativo ativo){
+    public Posicao (int quantidade){
         this.quantidade = quantidade;
-        this.ativo = new Ativo[quantidade];
     }
 
     //setter
