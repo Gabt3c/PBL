@@ -1,8 +1,8 @@
 public class Ativo {
     //atributos
     private int codigo;
-    private String nome;
-    private double precoAtual;
+    protected String nome;
+    protected double precoAtual;
 
     //construtor
     public Ativo(int codigo, String nome, double precoAtual){
@@ -21,15 +21,15 @@ public class Ativo {
         this.precoAtual=precoAtual;
     }
     //getters
-    public int getcodigo(){
+    public int getCodigo(){
         return this.codigo;
     }
     
-    public String getnome(){
+    public String getNome(){
         return this.nome;
     }
 
-    public double getprecoAtual(){
+    public double getPrecoAtual(){
         return this.precoAtual;
     }
 }
