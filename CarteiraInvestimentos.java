@@ -10,6 +10,7 @@ public class CarteiraInvestimentos{
         public void adicionarPosicao(Ativo ativo, int quantidade){
             posicao[this.qtAtivo].calcularValor();
         }
+        
         public double calcularPatrimonio(){
             double patrimonioTotal = 0;
             for (int i = 0; this.qtAtivo > i; i++){

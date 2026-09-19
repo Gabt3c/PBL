@@ -5,7 +5,7 @@ public class Cliente {
     protected Posicao[] posicao;
     protected Ativo[] ativo;
     protected CarteiraInvestimentos ctInvestimento;
-
+    //Construtor
     public Cliente (String nome, String CPF, int qtAtivo){
         this.nome = nome;
         this.CPF = CPF;
@@ -13,6 +13,7 @@ public class Cliente {
         this.ativo = new Ativo[qtAtivo];
         this.ctInvestimento = new CarteiraInvestimentos(null, qtAtivo);
     }
+    //Setters e Getters
     public void setNome(String nome){
         this.nome = nome;
     }

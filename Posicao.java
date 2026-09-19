@@ -2,6 +2,7 @@ public class Posicao {
     private int quantidade;// quantidade de posições
     protected Ativo[] ativo;
 
+    //Construtor
     public Posicao (int quantidade){
         this.quantidade = quantidade;
     }
@@ -10,6 +11,7 @@ public class Posicao {
     public void setQuantidade(int quantidade){
         this.quantidade=quantidade;
     }
+    
     //getter
     public int getQuantidade(){
         return this.quantidade;
