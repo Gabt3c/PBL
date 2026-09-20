@@ -11,7 +11,7 @@ public class Cliente {
         this.CPF = CPF;
         this.posicao = new Posicao[qtAtivo];
         this.ativo = new Ativo[qtAtivo];
-        this.ctInvestimento = new CarteiraInvestimentos(null, qtAtivo);
+        this.ctInvestimento = new CarteiraInvestimentos(qtAtivo);
     }
     //Setters e Getters
     public void setNome(String nome){

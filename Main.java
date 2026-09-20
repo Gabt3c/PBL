@@ -5,6 +5,9 @@ public class Main {
         J1.ativo[1] = new Ativo(02, "ITUB4", 38);
         J1.ativo[2] = new Ativo(03, "VALE3", 62);
         J1.posicao[0] = new Posicao(100);
+        J1.posicao[1] = new Posicao(50);
+        J1.posicao[2] = new Posicao(200);
+
 
         J1.ctInvestimento.exibirResumo();
         

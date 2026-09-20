@@ -27,7 +27,8 @@ public class Posicao {
 
     //calculo de posicao
     public double calcularValor(){
-         return ativo[quantidade].precoAtual * this.quantidade; //Passível de teste dentro do array, this.quantidade ou somente quantidade.
+         return ativo[quantidade].precoAtual * this.quantidade; 
+         //Passível de teste dentro do array, this.quantidade ou somente quantidade.
     }
     
 }
