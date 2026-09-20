@@ -14,7 +14,7 @@ public class Cliente {
         this.posicao = new Posicao[qtAtivo];
         this.ativo = new Ativo[qtAtivo];
 
-        this.ctInvestimento = new CarteiraInvestimentos();
+        this.ctInvestimento = new CarteiraInvestimentos(this);
     }
     //Setters e Getters
     public void setNome(String nome){
