@@ -1,19 +1,18 @@
 public class CarteiraInvestimentos{
         public Posicao[] posicao;
         public Cliente cliente;
-        public int qtAtivo;
 
-        public CarteiraInvestimentos(int qtAtivo){
-            this.posicao = new Posicao[qtAtivo];
+        public CarteiraInvestimentos(){
+            this.posicao = new Posicao[cliente.qtativo];
         }
 
         public void adicionarPosicao(Ativo ativo, int quantidade){
-            posicao[this.qtAtivo].calcularValor();
+            posicao[cliente.qtativo].calcularValor();
         }
         
         public double calcularPatrimonio(){
             double patrimonioTotal = 0;
-            for (int i = 0; this.qtAtivo > i; i++){
+            for (int i = 0; cliente.qtativo > i; i++){
                 patrimonioTotal = patrimonioTotal + posicao[i].calcularValor();
             }
             return patrimonioTotal;
@@ -22,7 +21,7 @@ public class CarteiraInvestimentos{
         public void exibirResumo(){
             System.out.println("Ativo  Preço atual  Quantidade");
             for (int i = 0; i < posicao.length; i++){
-                System.out.println(posicao[this.qtAtivo].getNomeAtivo()/*  + "  " + Posicao[]*/);
+                System.out.println(posicao[i].getNomeAtivo()/*  + "  " + Posicao[]*/);
             }
             
         }
