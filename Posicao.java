@@ -1,10 +1,13 @@
 public class Posicao {
+    private int referenciaAtivo;
     private int quantidade;// quantidade de posições
-    protected Ativo[] ativo;
+    protected Cliente cliente;
 
     //Construtor
-    public Posicao (int quantidade){
+    public Posicao (int quantidade, Cliente cliente, int referenciaAtivo){
         this.quantidade = quantidade;
+        this.cliente = cliente;
+        this.referenciaAtivo = referenciaAtivo;
     }
 
     //setter
@@ -19,15 +22,15 @@ public class Posicao {
 
     //Obtenção e retorno de ativos
     public double getValorAtivo(){
-        return ativo[quantidade].precoAtual;
+        return cliente.ativo[referenciaAtivo].precoAtual;
     }
     public String getNomeAtivo(){
-        return ativo[quantidade].nome;
+        return cliente.ativo[referenciaAtivo].nome;
     }
 
     //calculo de posicao
     public double calcularValor(){
-         return ativo[quantidade].precoAtual * this.quantidade; //Passível de teste dentro do array, this.quantidade ou somente quantidade.
+         return getValorAtivo() * this.quantidade; //Passível de teste dentro do array, this.quantidade ou somente quantidade.
     }
     
 }
