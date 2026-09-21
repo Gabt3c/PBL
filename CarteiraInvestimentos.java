@@ -8,11 +8,11 @@ public class CarteiraInvestimentos{
             this.posicao = new Posicao[cliente.qtativo];
             this.qtdPosicoes = 0;
         }
-
+//construtor para adicionar um ativo
 public void adicionarAtivo(int codigo, String nome, double precoAtual) {
     cliente.ativo[0] = new Ativo(codigo, nome, precoAtual);
 }
-
+//criação de posições para alocar os ativos
  public void adicionarPosicao(Cliente cliente, int quantidade, int referenciaAtivo) {
     this.posicao[qtdPosicoes] = new Posicao(cliente, quantidade, referenciaAtivo);
     this.qtdPosicoes++;
