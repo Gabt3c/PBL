@@ -1,10 +1,12 @@
 public class CarteiraInvestimentos{
         public Posicao[] posicao;
         public Cliente cliente;
+        private int qtdPosicoes;//será usado para percorrer a matriz no lugar de qtAtivo
 
         public CarteiraInvestimentos(Cliente cliente){
             this.cliente = cliente;
             this.posicao = new Posicao[cliente.qtativo];
+            this.qtdPosicoes = 0;
         }
 
 public void adicionarAtivo(int codigo, String nome, double precoAtual) {
@@ -12,14 +14,16 @@ public void adicionarAtivo(int codigo, String nome, double precoAtual) {
 }
 
  public void adicionarPosicao(Cliente cliente, int quantidade, int referenciaAtivo) {
-    this.posicao[referenciaAtivo] =
-        new Posicao(cliente, quantidade, referenciaAtivo);
+    this.posicao[qtdPosicoes] = new Posicao(cliente, quantidade, referenciaAtivo);
+    this.qtdPosicoes++;
 }
         
         public double calcularPatrimonio(){
             double patrimonioTotal = 0;
-            for (int i = 0; cliente.qtativo > i; i++){
-                patrimonioTotal += posicao[i].calcularValor();
+            for (int i = 0; this.qtdPosicoes > i; i++){
+                if (posicao[i] != null){
+                    patrimonioTotal += posicao[i].calcularValor();
+                }
             }
             return patrimonioTotal;
         }
@@ -41,7 +45,7 @@ public void adicionarAtivo(int codigo, String nome, double precoAtual) {
             System.out.println("CPF: " + cliente.getCPF());
             if(cliente.qtativo != 0){
             System.out.println("\nAtivo  Preço atual  Quantidade Valor da posição\n");
-            for (int i = 0; cliente.qtativo > i; i++){
+            for (int i = 0; this.qtdPosicoes > i; i++){
             exibirResumo(i);
                 }
             }
