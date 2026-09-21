@@ -20,11 +20,12 @@ public void adicionarAtivo(int codigo, String nome, double precoAtual) {
         
         public double calcularPatrimonio(){
             double patrimonioTotal = 0;
-            for (int i = 0; this.qtdPosicoes > i; i++){
+            for (int i = 0; cliente.qtativo > i; i++){
                 if (posicao[i] != null){
                     patrimonioTotal += posicao[i].calcularValor();
                 }
             }
+
             return patrimonioTotal;
         }
 
@@ -45,9 +46,10 @@ public void adicionarAtivo(int codigo, String nome, double precoAtual) {
             System.out.println("CPF: " + cliente.getCPF());
             if(cliente.qtativo != 0){
             System.out.println("\nAtivo  Preço atual  Quantidade Valor da posição\n");
-            for (int i = 0; this.qtdPosicoes > i; i++){
-            exibirResumo(i);
+            for (int i = 0; cliente.qtativo > i; i++){
+            if(posicao[i] != null){exibirResumo(i);}
                 }
+                
             }
             System.out.println("\nPatrimonio TotaL: R$ " + calcularPatrimonio());
             System.out.println("________________________________________________________");

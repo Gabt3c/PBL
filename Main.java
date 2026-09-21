@@ -34,11 +34,13 @@ public class Main {
         J4.ctInvestimento.posicao[0] = new Posicao(J4, 10, 0);
 
 
-        J3.ctInvestimento.exibirCarteira();
+        J3.ctInvestimento.exibirCarteira(); // Caso de teste com carteira zerada
 
         J3.ctInvestimento.adicionarAtivo(01, "UBEC6", 23);
         J3.ctInvestimento.adicionarPosicao(J3, 20, 0);
 
-        J3.ctInvestimento.exibirCarteira();
+        J3.ctInvestimento.exibirCarteira();// Caso de teste com adição de posição e ativo na carteira zerada
+
+        J1.ctInvestimento.exibirCarteira(); // Caso de teste com tres posições 
     }
 }
