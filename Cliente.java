@@ -6,7 +6,7 @@ public class Cliente {
     protected Posicao[] posicao;
     protected Ativo[] ativo;
     protected CarteiraInvestimentos ctInvestimento;
-    //Construtor
+    //Construtor de cliente que chama uma construção de carteira para ser associada ao cliente
     public Cliente (String nome, String CPF, int qtAtivo){
         this.qtativo = qtAtivo;
         this.nome = nome;
@@ -29,8 +29,4 @@ public class Cliente {
     public String getCPF(){
         return this.CPF;
     }
-    /*        public int getQtAtivo(){
-        return this.qtativo; 
-
-}*/
 }
