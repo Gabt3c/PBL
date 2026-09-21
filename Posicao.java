@@ -4,7 +4,7 @@ public class Posicao {
     protected Cliente cliente;
 
     //Construtor
-    public Posicao (int quantidade, Cliente cliente, int referenciaAtivo){
+    public Posicao ( Cliente cliente,int quantidade, int referenciaAtivo){
         this.quantidade = quantidade;
         this.cliente = cliente;
         this.referenciaAtivo = referenciaAtivo;
