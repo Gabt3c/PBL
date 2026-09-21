@@ -1,10 +1,10 @@
-public class Posicao {
+public class Posicao { // Classe posicao
     private int referenciaAtivo;
     private int quantidade;// quantidade de posições
     protected Cliente cliente;
 
     //Construtor
-    public Posicao ( Cliente cliente,int quantidade, int referenciaAtivo){
+    public Posicao (Cliente cliente, int quantidade, int referenciaAtivo){
         this.quantidade = quantidade;
         this.cliente = cliente;
         this.referenciaAtivo = referenciaAtivo;
