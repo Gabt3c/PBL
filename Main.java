@@ -38,21 +38,15 @@ public class Main {
 
         J1.ctInvestimento.exibirCarteira(); // Caso de teste com tres posições
 
-        // Desafio adicional: teste de venda de uma posição
-        System.out.println("\n--- TESTE DO DESAFIO ADICIONAL ---");
 
-        System.out.println("Quantidade inicial de PETR4: "
-                + J1.ctInvestimento.posicao[0].getQuantidade());
-
-        J1.ctInvestimento.posicao[0].vender(10);
-
-        System.out.println("Quantidade após venda: "
-                + J1.ctInvestimento.posicao[0].getQuantidade());
+        // Tentativa de venda comum
+        J1.ctInvestimento.tentarVenda(0, 50);
 
         // Tentativa de venda maior que a quantidade disponível
-        J1.ctInvestimento.posicao[0].vender(200);
-
+        J1.ctInvestimento.tentarVenda(0, 100);
+        
+        
         // Tentativa de venda com quantidade inválida
-        J1.ctInvestimento.posicao[0].vender(0);
+        J1.ctInvestimento.tentarVenda(0, -10);
     }
 }

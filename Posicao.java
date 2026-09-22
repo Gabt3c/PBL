@@ -16,19 +16,13 @@ public class Posicao { // Classe posicao
     }
 
     // Venda de uma quantidade da posição
-    public void vender(int quantidade){
-        if (quantidade <= 0){
-            System.out.println("Venda não realizada: a quantidade deve ser maior que zero.");
-            return;
+    public boolean vender(int quantidade){
+        if (quantidade <= 0 || quantidade > this.quantidade){
+            return false;
+        }else {
+            this.quantidade -= quantidade;
+            return true;
         }
-
-        if (quantidade > this.quantidade){
-            System.out.println("Venda não realizada: quantidade insuficiente.");
-            return;
-        }
-
-        this.quantidade -= quantidade;
-        System.out.println("Venda realizada com sucesso: " + quantidade + " unidade(s).");
     }
 
     //Obtenção e retorno de ativos

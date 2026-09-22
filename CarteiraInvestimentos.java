@@ -54,4 +54,18 @@ public void adicionarAtivo(int codigo, String nome, double precoAtual) {
             System.out.println("\nPatrimonio TotaL: R$ " + calcularPatrimonio());
             System.out.println("________________________________________________________");
         }
+
+        public void tentarVenda(int referencia, int quantidade){//João, consegue dar uma olhada no que você consegue fazer pra deixar esse teste bonito sem alterar tanto assim a lógica geral dos métodos?
+            int refVetor = referencia;
+            System.out.println("Quantidade inicial antes da venda: "+posicao[refVetor].getQuantidade());
+            boolean sucesso = posicao[refVetor].vender(quantidade);
+            if (sucesso){
+                System.out.println("\nVenda realizada com sucesso!");
+                System.out.println("\nNova quantidade: "+posicao[refVetor].getQuantidade());
+            }
+            if(!sucesso){
+                System.out.println("\nInfelizmente sua venda não atendeu aos parâmetros necessários");
+                System.out.println("\nQuantidade: "+posicao[refVetor].getQuantidade());
+            }
+        }
 }
