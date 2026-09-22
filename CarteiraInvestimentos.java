@@ -1,7 +1,10 @@
+
 public class CarteiraInvestimentos{
         public Posicao[] posicao;
         public Cliente cliente;
         private int qtdPosicoes;//será usado para percorrer a matriz no lugar de qtAtivo
+        private double mediador;
+        private int refp;
 
         public CarteiraInvestimentos(Cliente cliente){
             this.cliente = cliente;
@@ -10,7 +13,10 @@ public class CarteiraInvestimentos{
         }
 //construtor para adicionar um ativo
 public void adicionarAtivo(int codigo, String nome, double precoAtual) {
+    this.mediador = precoAtual;
+    if(precoAtual >= 0){
     cliente.ativo[0] = new Ativo(codigo, nome, precoAtual);
+    }
 }
 //criação de posições para alocar os ativos
  public void adicionarPosicao(Cliente cliente, int quantidade, int referenciaAtivo) {
@@ -31,7 +37,8 @@ public void adicionarAtivo(int codigo, String nome, double precoAtual) {
 
         public void exibirResumo(int referencia){ //Exibe resumo dos dados do ativo
             //int refVetor = referencia - 1;
-            int refVetor = referencia; 
+            int refVetor = referencia;
+            this.refp = referencia; 
             System.out.println(posicao[refVetor].getNomeAtivo()
                     + "    R$ " + posicao[refVetor].getValorAtivo()
                     + "         " + posicao[refVetor].getQuantidade()
@@ -44,6 +51,7 @@ public void adicionarAtivo(int codigo, String nome, double precoAtual) {
             System.out.println("________________________________________________________\n");
             System.out.println("Cliente: " + cliente.getNome());
             System.out.println("CPF: " + cliente.getCPF());
+            if(mediador != 0 || posicao[refp].getMediadorq() != 0){
             if(cliente.qtativo != 0){
             System.out.println("\nAtivo  Preço atual  Quantidade Valor da posição\n");
             for (int i = 0; cliente.qtativo > i; i++){
@@ -52,6 +60,7 @@ public void adicionarAtivo(int codigo, String nome, double precoAtual) {
                 
             }
             System.out.println("\nPatrimonio TotaL: R$ " + calcularPatrimonio());
+        }
             System.out.println("________________________________________________________");
         }
 

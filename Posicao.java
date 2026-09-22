@@ -2,12 +2,22 @@ public class Posicao { // Classe posicao
     private int referenciaAtivo;
     private int quantidade;// quantidade de posições
     protected Cliente cliente;
+    private int medidadorq;
 
     //Construtor
     public Posicao (Cliente cliente, int quantidade, int referenciaAtivo){
+        this.medidadorq = quantidade;
+        if(quantidade >= 0){
         this.quantidade = quantidade;
         this.cliente = cliente;
         this.referenciaAtivo = referenciaAtivo;
+        }
+    }
+
+    // Mediadir q get
+    public int getMediadorq(){
+        this.medidadorq = medidadorq;
+        return medidadorq;
     }
 
     //getter
