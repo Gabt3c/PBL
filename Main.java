@@ -6,7 +6,6 @@ public class Main {
         Cliente J2 = new Cliente("João Victor", "222.222.222-22", 5);
         Cliente J3 = new Cliente("Andre", "333.333.333-33", 3);
         Cliente J4 = new Cliente("Gabriel", "444.444.444-44", 1);
-        Cliente J5 = new Cliente("Garibaldo", "666.666.666-66", 1);
 
         //instânciação do objeto Ativo pertencente ao objeto Cliente
         J1.ativo[0] = new Ativo(01, "PETR4", 32.50);
@@ -20,8 +19,6 @@ public class Main {
         J2.ativo[4] = new Ativo(05, "DEMT6", 10);
         J4.ativo[0] = new Ativo(01, "FABR3", 10);
 
-        J5.ativo[0] = new Ativo(01, "FABR3", -10);
-
         //instânciação do objeto Posicao pertencente ao objeto CarteiraInvestimentos
         J1.ctInvestimento.posicao[0] = new Posicao(J1, 100, 0);
         J1.ctInvestimento.posicao[1] = new Posicao(J1, 50, 1);
@@ -34,10 +31,6 @@ public class Main {
 
         J4.ctInvestimento.posicao[0] = new Posicao(J4, 10, 0);
 
-        J5.ctInvestimento.posicao[0] = new Posicao(J5, -10, 0);
-
-
-        J5.ctInvestimento.exibirCarteira();
 
         J3.ctInvestimento.exibirCarteira(); // Caso de teste com carteira zerada
         J3.ctInvestimento.adicionarAtivo(01, "UBEC6", 23);
