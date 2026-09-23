@@ -20,7 +20,7 @@ public class Main {
         J4.ativo[0] = new Ativo(01, "FABR3", 10);
 
         //instânciação do objeto Posicao pertencente ao objeto CarteiraInvestimentos
-        J1.ctInvestimento.posicao[0] = new Posicao(J1, 100, 0);
+        J1.ctInvestimento.posicao[0] = new Posicao(J1, -100, 0);
         J1.ctInvestimento.posicao[1] = new Posicao(J1, 50, 1);
         J1.ctInvestimento.posicao[2] = new Posicao(J1, 20, 2);
         J2.ctInvestimento.posicao[0] = new Posicao(J2, 3, 0);
@@ -46,8 +46,7 @@ public class Main {
 
         // Tentativa de venda maior que a quantidade disponível
         J1.ctInvestimento.tentarVenda(0, 100);
-        
-        
+    
         // Tentativa de venda com quantidade inválida
         J1.ctInvestimento.tentarVenda(0, -10);
     }

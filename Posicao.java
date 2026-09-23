@@ -5,7 +5,11 @@ public class Posicao { // Classe posicao
 
     //Construtor
     public Posicao (Cliente cliente, int quantidade, int referenciaAtivo){
-        this.quantidade = quantidade;
+        if(quantidade > 0){
+            this.quantidade = quantidade;
+        }else{
+            System.out.println("Não vou deixar você quebrar o sistema, maldito!");
+        }
         this.cliente = cliente;
         this.referenciaAtivo = referenciaAtivo;
     }

@@ -8,12 +8,13 @@ public class Cliente {
     protected CarteiraInvestimentos ctInvestimento;
     //Construtor de cliente que chama uma construção de carteira para ser associada ao cliente
     public Cliente (String nome, String CPF, int qtAtivo){
-        this.qtativo = qtAtivo;
+        if (qtAtivo>=0){
+            this.qtativo = qtAtivo;
+            this.posicao = new Posicao[qtAtivo];
+            this.ativo = new Ativo[qtAtivo];
+        }
         this.nome = nome;
         this.CPF = CPF;
-        this.posicao = new Posicao[qtAtivo];
-        this.ativo = new Ativo[qtAtivo];
-
         this.ctInvestimento = new CarteiraInvestimentos(this);
     }
     //Setters e Getters
